@@ -1,6 +1,6 @@
 {
-  "name": "react-native-uitextview",
-  "version": "2.0.0-rc.0",
+  "name": "@claycoleman/react-native-uitextview",
+  "version": "2.0.1",
   "description": "UITextView for React Native",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -40,14 +40,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluesky-social/react-native-uitextview.git"
+    "url": "git+https://github.com/claycoleman/react-native-uitextview.git"
   },
-  "author": "Hailey <me@haileyok.com> (https://github.com/haileyok)",
+  "author": "Clay Coleman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bluesky-social/react-native-uitextview/issues"
+    "url": "https://github.com/claycoleman/react-native-uitextview/issues"
   },
-  "homepage": "https://github.com/bluesky-social/react-native-uitextview#readme",
+  "homepage": "https://github.com/claycoleman/react-native-uitextview#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
