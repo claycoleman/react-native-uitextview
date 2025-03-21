@@ -26,6 +26,8 @@ export type NativeFontWeight =
 
 type FontStyle = 'normal' | 'italic'
 
+type TextAlign = 'auto' | 'left' | 'right' | 'center' | 'justify'
+
 interface NativeProps extends ViewProps {
   text: string
   color?: ColorValue
@@ -35,6 +37,7 @@ interface NativeProps extends ViewProps {
   fontFamily?: string
   letterSpacing?: Float
   lineHeight?: Float
+  textAlign?: WithDefault<TextAlign, 'auto'>
   textDecorationLine?: WithDefault<TextDecorationLine, 'none'>
   textDecorationStyle?: WithDefault<TextDecorationStyle, 'solid'>
   textDecorationColor?: ColorValue

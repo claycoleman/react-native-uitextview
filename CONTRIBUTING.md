@@ -97,6 +97,21 @@ Remember to add tests for your change if possible. Run the unit tests by:
 yarn test
 ```
 
+### Development Guide
+
+This repo uses the new Fabric Native Components architecture. Some basic details are found [here](https://reactnative.dev/docs/fabric-native-components-introduction).
+
+We have two codegen components:
+
+- `RNUITextView` is the main component which allocates a `UITextView` and renders it.
+- `RNUITextViewChild` is the child component which renders the text with a given set of styles.
+
+To add support for a new text style, you should update the `RNUITextViewChildNativeComponent.ts` file with the new style, then head into `RNUITextViewShadowNode.cpp` to add support for the new style by updating the `textAttributes` variable.
+
+Some styles may require updates to the actual `UITextView` implementation in `RNUITextView.mm`, specifically the `updateProps` method.
+
+To test these changes, you should run the example app, add some new styles to the `UITextView` component, and verify if they apply correctly.
+
 ### Commit message convention
 
 We follow the [conventional commits specification](https://www.conventionalcommits.org/en) for our commit messages:

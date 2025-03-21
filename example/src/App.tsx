@@ -161,6 +161,73 @@ export default function App() {
             </Text>
           </View>
 
+          {/* Text Alignment Examples */}
+          <RNText style={styles.header}>Text Alignment</RNText>
+
+          <View>
+            <RNText style={styles.subheader}>
+              Base React Native Text Alignment
+            </RNText>
+            <RNText style={[styles.text, styles.textAlignLeft]}>
+              Left aligned text. This text should be aligned to the left side of
+              the container.
+            </RNText>
+            <RNText style={styles.spacer} />
+            <RNText style={[styles.text, styles.textAlignCenter]}>
+              Center aligned text. This text should be centered within the
+              container.
+            </RNText>
+            <RNText style={styles.spacer} />
+            <RNText style={[styles.text, styles.textAlignRight]}>
+              Right aligned text. This text should be aligned to the right side
+              of the container.
+            </RNText>
+            <RNText style={styles.spacer} />
+            <RNText style={[styles.text, styles.textAlignJustify]}>
+              Justified text. This text should be justified, meaning it is
+              aligned to both the left and right margins. This is a longer
+              paragraph so you can see the justification effect when there are
+              multiple lines of text displayed in the component.
+            </RNText>
+          </View>
+
+          <View>
+            <RNText style={styles.subheader}>UITextView Text Alignment</RNText>
+            <Text
+              selectable
+              uiTextView
+              style={[styles.text, styles.textAlignLeft]}>
+              Left aligned text. This text should be aligned to the left side of
+              the container.
+            </Text>
+            <RNText style={styles.spacer} />
+            <Text
+              selectable
+              uiTextView
+              style={[styles.text, styles.textAlignCenter]}>
+              Center aligned text. This text should be centered within the
+              container.
+            </Text>
+            <RNText style={styles.spacer} />
+            <Text
+              selectable
+              uiTextView
+              style={[styles.text, styles.textAlignRight]}>
+              Right aligned text. This text should be aligned to the right side
+              of the container.
+            </Text>
+            <RNText style={styles.spacer} />
+            <Text
+              selectable
+              uiTextView
+              style={[styles.text, styles.textAlignJustify]}>
+              Justified text. This text should be justified, meaning it is
+              aligned to both the left and right margins. This is a longer
+              paragraph so you can see the justification effect when there are
+              multiple lines of text displayed in the component.
+            </Text>
+          </View>
+
           <View>
             <RNText style={styles.subheader}>Base, textDecorationLine</RNText>
             <RNText style={[styles.text, styles.underlined]}>
@@ -667,5 +734,17 @@ const styles = StyleSheet.create({
   },
   backgroundColor: {
     backgroundColor: 'yellow'
+  },
+  textAlignLeft: {
+    textAlign: 'left'
+  },
+  textAlignCenter: {
+    textAlign: 'center'
+  },
+  textAlignRight: {
+    textAlign: 'right'
+  },
+  textAlignJustify: {
+    textAlign: 'justify'
   }
 })

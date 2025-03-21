@@ -94,6 +94,27 @@ Size RNUITextViewShadowNode::measureContent(
           textAttributes.textDecorationStyle = TextDecorationStyle::Double;
         }
         
+        switch (props.textAlign) {
+          case RNUITextViewChildTextAlign::Center:
+            textAttributes.alignment = TextAlignment::Center;
+            break;
+          case RNUITextViewChildTextAlign::Left:
+            textAttributes.alignment = TextAlignment::Left;
+            break;
+          case RNUITextViewChildTextAlign::Right:
+            textAttributes.alignment = TextAlignment::Right;
+            break;
+          case RNUITextViewChildTextAlign::Justify:
+            textAttributes.alignment = TextAlignment::Justified;
+            break;
+          case RNUITextViewChildTextAlign::Auto:
+            textAttributes.alignment = TextAlignment::Natural;
+            break;
+          default:
+            textAttributes.alignment = TextAlignment::Natural;
+            break;
+        }
+        
         textAttributes.backgroundColor = props.backgroundColor;
 
         fragment.string = props.text;
